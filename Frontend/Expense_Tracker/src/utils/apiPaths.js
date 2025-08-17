@@ -1,4 +1,8 @@
-export const BASE_URL ="http://localhost:8000";
+const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+export const BASE_URL = isDevelopment
+    ? "http://localhost:8000"
+    : "https://expense-tracker-backend-6f48.onrender.com";
 
 //utils/apiPaths.js
 export const API_PATHS ={
